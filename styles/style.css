@@ -1,8 +1,47 @@
 *{
     box-sizing: border-box;
     margin: 0; padding: 0;
+    font-family: sofia-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body{
     padding: 1em;
+}
+
+main ul{
+    width: 100%;
+}
+
+main ul li{
+    list-style-type: none;
+    width: 100%;
+    padding: 1em;
+    
+    border-radius: 5px;
+    border-left: 3px solid #b4dcce;
+    background-color: #effaf6;
+}
+
+main ul li div{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* de naam */
+main ul li div h3{
+    margin-left: 0.5em;
+}
+
+/* de quote */
+main ul li > p{
+    font-size: 3em;
+    line-height: 1.25em;
+}
+
+main ul li div img{
+    width: 20px;
 }
