@@ -1,18 +1,11 @@
 // variabelen
-const array = [ "1", "2"]
-const foo = "bar"
-
 const urlAPI = 'https://quote.api.fdnd.nl/v1/quote'
-
 const quoteLijst = document.querySelector('ul:first-of-type')
-const lijst = document.querySelector('ul:nth-of-type(2)')
-
-
 
 
 // story
 getData()
-//testFunctie()
+
 
 //functions
 function getData(){
@@ -33,12 +26,4 @@ function getData(){
         </div
        </li>`)
     })
-}
-
-
-function testFunctie(){
-  console.log("joe")
-  console.log(array[0])
-  console.log(foo)
-  quoteLijst.insertAdjacentHTML('afterbegin', '<li>${foo}</li>')
 }
