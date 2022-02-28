@@ -14,8 +14,8 @@ export function getData(){
       return response.json()
     })
     .then(quotes => {
-        console.log(quotes.data)
         paragraph.innerHTML =  "Here are some quotes to inspire you!"
+        quotes.data = quotes.data.slice(0,-2) //Laatste 2 items weghalen omdat daar style-tags in zitten
         quotes.data.forEach(data => {
             quoteList.insertAdjacentHTML('afterbegin', 
             `<li> 
