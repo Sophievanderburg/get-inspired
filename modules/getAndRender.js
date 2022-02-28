@@ -28,7 +28,6 @@ export function getAndRenderData(){
 //Render data form API
 export function renderData(quotes){
     console.log("RENDER DATA")
-    console.log(quotes.data)
     paragraph.innerHTML =  "Here are some quotes to inspire you!"
     quotes.data.forEach(data => {
         quoteList.insertAdjacentHTML('afterbegin', 
