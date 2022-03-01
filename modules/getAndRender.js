@@ -1,3 +1,5 @@
+import { getTags, getAuthors } from '/modules/forms.js'
+
 // variabelen
 export const urlAPI = 'https://quote.api.fdnd.nl/v1/quote'
 export const quoteList = document.querySelector('ul:first-of-type')
@@ -17,10 +19,13 @@ export function getAndRenderData(){
         return response.json()
       })
       .then(quotes =>{
-          renderData(quotes)
+        quotes.data = quotes.data.slice(0,-4)
+        renderData(quotes)
+        getTags(quotes)
+        getAuthors(quotes)
       })
       .catch((error) => {
-        console.log("ERROR")
+        console.log("Er gaat iets fout...")
         console.log(error)
     });
 }
