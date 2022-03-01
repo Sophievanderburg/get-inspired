@@ -39,11 +39,14 @@ header::before{
 }
 
 header h1{
+    width: 100%;
+    text-align: center;
     font-size: 100px;
 }
 
 header h1 > span{
     font-size:50px;
+    line-height: 50px;
 }
 
 header a{
@@ -213,4 +216,18 @@ main section > form{
 
 main section > form.show{
     display: block;
+}
+
+main section > form input[type="submit"]{
+    padding: 0.5em 1em;
+    border: none;
+    background-color: #3D5CA6;
+    color: white;
+    border-radius: 20px;
+
+    margin-top: 1em;
+}
+
+main section > form input[type="submit"]:disabled{
+    background-color: lightgray;
 }

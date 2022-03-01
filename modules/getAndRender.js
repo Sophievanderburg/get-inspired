@@ -1,11 +1,10 @@
-import { getTags, getAuthors } from '/modules/forms.js'
+import { getTags, getAuthors} from '/modules/forms.js'
 
 // variabelen
 export const urlAPI = 'https://quote.api.fdnd.nl/v1/quote'
 export const quoteList = document.querySelector('ul:first-of-type')
 
 export const paragraph = document.querySelector('main > p')
-
 
 // Activate functions
 getAndRenderData();
