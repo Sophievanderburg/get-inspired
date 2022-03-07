@@ -1,4 +1,6 @@
 #  Welcome to the Get Inspired repo! ✨
+Link to Github Pages: [sophievanderburg.github.io/get-inspired/](sophievanderburg.github.io/get-inspired/)
+
 Here will be some pictures off the SPA when it is "finished" :)
 
 ## About the SPA
@@ -14,7 +16,16 @@ Maybe you have a favourite designer and you only want to see the quotes they sai
 
 
 
+
 ## Practical information
+### Activity diagram
+This is a diagram of how the SPA works <br>
+HIER KOMT EEN ACTIVITY DIAGRAM
+
+### How to install
+If you do not use Github desktop yet, stop with what you are doing and download it now. I've spent to much time messing around in the terminal. So that is a little hint from me to you. 😄 <br>
+If you are at the code-tab on my Github, you see a green button with the text 'code' in it. Click on that button and click on the option 'open with Github Desktop'. This way, it clones my repo on your computer. Now you can adjust my code and write you own. Good luck! 🍀
+
 ### The API
 URL: https://quote.api.fdnd.nl/v1/quote <br>
 From the API I fetch the quotes that are rendered in the SPA
@@ -30,6 +41,13 @@ Here is an example of what an object looks like:
 "bio":"<bio of the author>",
 "avatar":"<url to a picture of the author>"}
 ```
+
+## What I would do if I had more time
+- [ ] 1
+- [ ] 2
+- [ ] 3
+- [ ] 4
+- [ ] 5
 
 
 
