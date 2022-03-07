@@ -1,8 +1,10 @@
+import { authorForm } from './sectionInteraction.js';
+
+
 export const urlAPI = 'https://quote.api.fdnd.nl/v1/quote'
 export const titleFromTagsForm = document.querySelector("main section form:first-of-type h3")
 export const titleFromAuthorForm = document.querySelector("main section form:nth-of-type(2) h3")
-
-export const checkboxAuthor = document.querySelectorAll("main section form:nth-of-type(2) div input[type='checkbox']") 
+export const checkboxAuthor = document.querySelectorAll("main section form:nth-of-type(2) input[type='checkbox']") 
 
 
 export function getTags(quotes){
@@ -34,18 +36,30 @@ export function getAuthors(quotes){
     authors.forEach(data => {
         titleFromAuthorForm.insertAdjacentHTML('afterend', 
         `<div>
-            <input type="checkbox" name="${data}">
+            <input type="checkbox" id="${data}">
             <label for="${data}"> ${data}</label>
         </div>`)
     })
+
+    authorForm.addEventListener('change', event => {
+
+        let checkedInputs = [...authorForm.querySelectorAll('input:checked')].map(el => el.id);
+        
+        // Filter de oorspronkelijke dataset op de entries die in de checkbox aangevinkt zijn
+        let newData = quotes.data.filter(element => {
+          // Als een van de checkbox entries matcht met 1 van de dataset entries
+          if(checkedInputs.includes(element.name)) {
+            // Voeg 'm toe aan de nieuwe array
+            return true;
+          } else {
+            // Filter 'm uit de nieuwe array
+            return false;
+          }
+        })
+                
+        // Nieuwe array
+        console.log('Gefilterde array')
+        console.log(newData);
+      })  
 }
 
-export function getCheckedItems(){
-    let checkedAuthors = [];
-    checkboxAuthor.forEach((checkbox) => {
-        if (checkbox.checked) {
-            console.log(checkbox.name)
-        }; 
-    });
-    console.log(checkedAuthors)
-}
