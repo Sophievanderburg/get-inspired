@@ -2,6 +2,8 @@ export const urlAPI = 'https://quote.api.fdnd.nl/v1/quote'
 export const titleFromTagsForm = document.querySelector("main section form:first-of-type h3")
 export const titleFromAuthorForm = document.querySelector("main section form:nth-of-type(2) h3")
 
+export const checkboxAuthor = document.querySelectorAll("main section form:nth-of-type(2) div input[type='checkbox']") 
+
 
 export function getTags(quotes){
     console.log("GET TAGS")
@@ -33,7 +35,17 @@ export function getAuthors(quotes){
         titleFromAuthorForm.insertAdjacentHTML('afterend', 
         `<div>
             <input type="checkbox" name="${data}">
-        <label for="${data}"> ${data}</label>
+            <label for="${data}"> ${data}</label>
         </div>`)
     })
+}
+
+export function getCheckedItems(){
+    let checkedAuthors = [];
+    checkboxAuthor.forEach((checkbox) => {
+        if (checkbox.checked) {
+            console.log(checkbox.name)
+        }; 
+    });
+    console.log(checkedAuthors)
 }

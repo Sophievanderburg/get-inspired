@@ -105,8 +105,6 @@ main > ul{
     height: 70vh;
     overflow: scroll;
     overscroll-behavior: contain;
-    display: flex;
-    flex-direction: column-reverse;
 }
 
 main > ul li{
@@ -160,15 +158,19 @@ main > ul li > p{
 }
 
 main > ul li div img{
-    width: 20px;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 10% 50%;
 }
 
 /* ------------------------- section -------------------------*/
 main section{
     background-color: white;
     position: absolute;
-    bottom: -100%; left: 1em;
-    height: 90vh; width: 90vw;
+    bottom: -100%; left: calc(50% - 47.5vw);
+    height: 90vh; width: 95vw;
     border-radius: 15px;
 
     box-shadow: 0px 0px 10px #a9a9c2;
@@ -178,7 +180,7 @@ main section{
 }
 
 main section.active{
-    bottom: 1em; left: 1em;
+    bottom: 1em; left: calc(50% - 47.5vw);
 }
 
 main section > div button.selected{
