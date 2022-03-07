@@ -57,7 +57,6 @@ export function getAuthors(quotes){
           }
         })
            
-        
         // Nieuwe array
         console.log('Gefilterde array')
         console.log(newData);
