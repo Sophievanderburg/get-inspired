@@ -28,9 +28,5 @@ export function showTagsForm(){
     tagsButton.classList.add("selected")
 }
 
-
-showSectionLink.addEventListener('click',showOrHideSection);
-// hideSectionButton.addEventListener('click',showOrHideSection);
-
 tagsButton.addEventListener('click', showTagsForm);
 authorButton.addEventListener('click', showAuthorForm);

@@ -1,18 +1,23 @@
-import { authorForm } from './sectionInteraction.js';
+import { authorForm, tagsForm } from './sectionInteraction.js';
 
 
 export const urlAPI = 'https://quote.api.fdnd.nl/v1/quote'
 export const titleFromTagsForm = document.querySelector("main section form:first-of-type h3")
 export const titleFromAuthorForm = document.querySelector("main section form:nth-of-type(2) h3")
+
+export const sectionTagsForm = document.querySelector("main section form:nth-of-type(1) section")
+export const sectionAuthorForm = document.querySelector("main section form:nth-of-type(2) section")
+
+
 export const checkboxAuthor = document.querySelectorAll("main section form:nth-of-type(2) input[type='checkbox']") 
 
 
 export function getTags(quotes){
-    titleFromTagsForm.innerHTML=" "
+    sectionTagsForm.innerHTML=""
     console.log("GET TAGS")
     // Hier komt de filter voor de dubbele
     quotes.data.forEach(data => {
-        titleFromTagsForm.insertAdjacentHTML('afterend', 
+        sectionTagsForm.insertAdjacentHTML('afterbegin', 
         `<div>
             <input type="checkbox" name="${data.tags}">
         <label for="${data.tags}"> ${data.tags}</label>
@@ -21,6 +26,7 @@ export function getTags(quotes){
 }
 
 export function getAuthors(quotes){
+    sectionAuthorForm.innerHTML=""
     console.log("GET AUTHORS");
     // Bron: https://stackoverflow.com/questions/37856130/javascript-get-values-from-array-but-ignore-duplicates
     let array = quotes.data;
@@ -35,7 +41,7 @@ export function getAuthors(quotes){
         }
     } 
     authors.forEach(data => {
-        titleFromAuthorForm.insertAdjacentHTML('afterend', 
+        sectionAuthorForm.insertAdjacentHTML('afterbegin', 
         `<div>
             <input type="checkbox" id="${data}">
             <label for="${data}"> ${data}</label>

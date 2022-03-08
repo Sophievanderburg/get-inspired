@@ -1,6 +1,8 @@
 import {quoteList} from '/modules/getAndRender.js'
 import {hideSectionButton, showOrHideSection} from '/modules/sectionInteraction.js'
 
+let profileImg = document.querySelectorAll('main ul li div img')
+
 export function showLoadingState(){
     quoteList.insertAdjacentHTML('afterbegin', 
         `<p>
@@ -12,19 +14,16 @@ export function hideLoadingState(){
     quoteList.removeChild(quoteList.firstElementChild);
 }
 
-
 export function showErrorState(){
     quoteList.insertAdjacentHTML('afterbegin', 
-        `<p>
-        Something went wrong... Please reload this page to try again.
-        </p>`)
+    `<p>
+    Something went wrong... Please reload this page to try again.
+    </p>`)
 }
 
 export function removeSearchState(){   
     history.back()
     showOrHideSection()
-
-    console.log(window.location.href)
 }
 
 hideSectionButton.addEventListener('click', removeSearchState);

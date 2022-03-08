@@ -13,13 +13,16 @@ import { urlAPI, quoteList, paragraph, getAndRenderData, renderData } from './mo
 import { checkboxAuthor } from './modules/forms.js'
 
 // import states 
-import { showLoadingState } from './modules/states.js';
+import { showLoadingState, errorImage } from './modules/states.js';
 
 
 routie({
     '': () => {
         showLoadingState();
         getAndRenderData();
+    },
+    'filter': () => {
+        showOrHideSection();
     }
 });
 

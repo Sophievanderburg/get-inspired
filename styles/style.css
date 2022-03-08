@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6{
     font-style: normal;
 }
 
-p, a, label{
+p, a, label, button{
     font-family: sofia-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -192,7 +192,7 @@ main > ul > p{
 }
 
 /* ------------------------- section -------------------------*/
-main section{
+main > section{
     background-color: white;
     position: absolute;
     bottom: -100%; left: calc(50% - 47.5vw);
@@ -205,15 +205,15 @@ main section{
     transition: 0.5s;
 }
 
-main section.active{
+main > section.active{
     bottom: 1em; left: calc(50% - 47.5vw);
 }
 
-main section > div button.selected{
+main > section > div button.selected{
     border-bottom: 2px solid #3D5CA6;
 }
 
-main section > button:first-of-type{
+main > section > button:first-of-type{
     font-size: 1.5em;
     font-weight: 800;
     position: absolute;
@@ -227,25 +227,27 @@ main section > div{
     flex-direction: row;
 }
 
-main section > div button{
+main > section > div button{
     width: 50%;
     background-color: transparent;
     border: none;
     padding: 0.5em 0;
 }
 
-main section > form{
+
+/* ------------------------- form -------------------------*/
+main > section > form{
     width: 100%;
     height: 90%;
     display: none;
     padding-top: 1em;
 }
 
-main section > form.show{
+main > section > form.show{
     display: block;
 }
 
-main section > form input[type="submit"]{
+main > section > form section input[type="submit"]{
     padding: 0.5em 1em;
     border: none;
     background-color: #3D5CA6;
@@ -255,6 +257,6 @@ main section > form input[type="submit"]{
     margin-top: 1em;
 }
 
-main section > form input[type="submit"]:disabled{
+main > section > form section input[type="submit"]:disabled{
     background-color: lightgray;
 }

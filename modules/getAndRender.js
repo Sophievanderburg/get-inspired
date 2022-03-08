@@ -29,11 +29,13 @@ export function getAndRenderData(){
         console.log("Er gaat iets fout...")
         hideLoadingState()
         showErrorState()
+        console.log(error)
     });
 }
 
 //Render data form API
 export function renderData(quotes){
+    quoteList.innerHTML=" "
     console.log("RENDER DATA")
     paragraph.innerHTML =  "Here are some quotes to inspire you!"
     quotes.data.forEach(data => {
@@ -41,7 +43,7 @@ export function renderData(quotes){
         `<li> 
             <p> ${data.text}</p>
             <div>
-                <img src='${data.avatar}' alt='Profielfoto'>
+                <img src='${data.avatar}' alt='Profielfoto' onerror="this.src='./images/placeholder.jpeg'">
                 <h3>${data.name}</h3>
             </div
         </li>`)
