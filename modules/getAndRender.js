@@ -5,8 +5,8 @@ export const quoteList = document.querySelector('ul:first-of-type')
 export const paragraph = document.querySelector('main > p')
 
 
-import { authorsForm, getTags} from '/modules/forms.js'
-import { hideLoadingState, showErrorState } from '/modules/states.js'
+import { authorsForm, getTags} from './forms.js'
+import { hideLoadingState, showErrorState } from './states.js'
 
 
 //Get data form API

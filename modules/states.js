@@ -1,5 +1,5 @@
-import {quoteList} from '/modules/getAndRender.js'
-import {hideSectionButton, showOrHideSection} from '/modules/sectionInteraction.js'
+import {quoteList} from './getAndRender.js'
+import {hideSectionButton, showOrHideSection} from './sectionInteraction.js'
 
 let profileImg = document.querySelectorAll('main ul li div img')
 
