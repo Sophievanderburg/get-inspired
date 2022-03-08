@@ -1,19 +1,19 @@
 import './routes/routie.js'
 
 // Code for the scrollbutton
-import { scrollButton, main, scrollFunction } from './modules/scroll.js';
+import { scrollButton, main, scrollFunction } from './modules/scroll.js'
 
 // Show and hide the form
 import { section, showSectionLink, hideSectionButton, tagsButton, tagsForm, authorButton, authorForm, showOrHideSection, showTagsForm, showAuthorForm } from './modules/sectionInteraction.js';
 
 // Get and render the quotes form the API
-import { urlAPI, quoteList, paragraph, getAndRenderData, renderData } from './modules/getAndRender.js';
+import { urlAPI, quoteList, paragraph, getAndRenderData, renderData } from './modules/getAndRender.js'
 
 //forms
 import { checkboxAuthor } from './modules/forms.js'
 
 // import states 
-import { showLoadingState, errorImage } from './modules/states.js';
+import { showLoadingState } from './modules/states.js'
 
 
 routie({
