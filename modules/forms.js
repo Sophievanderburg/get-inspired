@@ -1,4 +1,4 @@
-import { authorForm, tagsForm } from './sectionInteraction.js';
+import { authorForm, tagForm } from './sectionInteraction.js';
 import { cleanElement } from './utility.js'
 import {displatyFilteredQuotes, displatyFilteredTags} from './showFiltered.js'
 import { renderData } from './getAndRender.js'
@@ -15,10 +15,10 @@ export const sectionAuthorForm = document.querySelector("main section form:nth-o
 export const checkboxAuthor = document.querySelectorAll("main section form:nth-of-type(2) input[type='checkbox']") 
 
 
-export function getTags(quotes){
+export function tagsForm(quotes){
     console.log("GET TAGS")
 
-    tagsForm.addEventListener('change', event => {
+    tagForm.addEventListener('change', event => {
         filteredTags(quotes, event)
     })
 
@@ -43,7 +43,7 @@ export function getTags(quotes){
 }
 
 function filteredTags(quotes) {
-    let checkedInputsTags = [...tagsForm.querySelectorAll('input:checked')].map(el => el.id);
+    let checkedInputsTags = [...tagForm.querySelectorAll('input:checked')].map(el => el.id);
     console.log(checkedInputsTags)
     
     let newData = [];

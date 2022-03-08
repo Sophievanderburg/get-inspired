@@ -3,7 +3,7 @@ export const showSectionButton= document.querySelector('main > button');
 export const hideSectionButton = document.querySelector('main section > button:first-of-type');
 
 export const tagsButton = document.querySelector('main section div button:first-of-type');
-export const tagsForm = document.querySelector('main section form:first-of-type');
+export const tagForm = document.querySelector('main section form:first-of-type');
 export const authorButton = document.querySelector('main section div button:nth-of-type(2)');
 export const authorForm = document.querySelector('main section form:nth-of-type(2)');
 

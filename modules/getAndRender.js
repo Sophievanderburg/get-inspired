@@ -5,7 +5,7 @@ export const quoteList = document.querySelector('ul:first-of-type')
 export const paragraph = document.querySelector('main > p')
 
 
-import { authorsForm, getTags} from './forms.js'
+import { authorsForm, tagsForm} from './forms.js'
 import { hideLoadingState, showErrorState } from './states.js'
 
 
@@ -20,7 +20,7 @@ export function getAndRenderData(){
         hideLoadingState()
         quotes.data = quotes.data.slice(0,-5)
         renderData(quotes)
-        getTags(quotes)
+        tagsForm(quotes)
         authorsForm(quotes)
       })
       .catch((error) => {
