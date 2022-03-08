@@ -1,6 +1,6 @@
 import { authorForm, tagsForm } from './sectionInteraction.js';
 import { cleanElement } from './utility.js'
-import {displatyFilteredQuotes} from './showFiltered.js'
+import {displatyFilteredQuotes, displatyFilteredTags} from './showFiltered.js'
 import { renderData } from './getAndRender.js'
 
 
@@ -16,17 +16,63 @@ export const checkboxAuthor = document.querySelectorAll("main section form:nth-o
 
 
 export function getTags(quotes){
-    sectionTagsForm.innerHTML=""
     console.log("GET TAGS")
-    // Hier komt de filter voor de dubbele
-    quotes.data.forEach(data => {
+
+    tagsForm.addEventListener('change', event => {
+        filteredTags(quotes, event)
+    })
+
+    sectionTagsForm.innerHTML=""
+    let allTags = quotes.data.map(data =>{
+        return data.tags.split(',')
+    });
+
+    allTags = [...new Set(allTags.flat(1))]
+
+    allTags = allTags.map(el => {
+        return el.trim()
+    });
+
+    allTags.forEach(item => {
         sectionTagsForm.insertAdjacentHTML('afterbegin', 
         `<div>
-            <input type="checkbox" id="${data.tags}">
-        <label for="${data.tags}"> ${data.tags}</label>
+            <input type="checkbox" id="${item}">
+        <label for="${item}"> ${item}</label>
         </div>`)
     })
 }
+
+function filteredTags(quotes) {
+    let checkedInputsTags = [...tagsForm.querySelectorAll('input:checked')].map(el => el.id);
+    console.log(checkedInputsTags)
+    
+    let newData = [];
+
+    // hulp van Robert
+    checkedInputsTags.forEach(input => {
+        quotes.data.forEach(quote => {
+            if(quote.tags.includes(input)) {
+                console.log('input matches a quote tag or partial!')
+                newData.push(quote);
+            } else {
+                console.log('input does not match');
+            }
+        });
+    })
+
+    newData = [...new Set(newData)]
+    
+    
+    cleanElement();
+
+    if (newData.length > 0){
+        displatyFilteredTags(newData);
+    } else{
+        renderData(quotes);
+    }
+    
+} 
+
 
 
 
@@ -61,7 +107,9 @@ export function authorsForm(quotes){
 
 function filteredAuthors(quotes) {
     let checkedInputs = [...authorForm.querySelectorAll('input:checked')].map(el => el.id);
-    
+    console.log('checkedInputs:')
+    console.log(checkedInputs)
+
     // Filter de oorspronkelijke dataset op de entries die in de checkbox aangevinkt zijn
     let newData = quotes.data.filter(element => {
       // Als een van de checkbox entries matcht met 1 van de dataset entries
@@ -85,4 +133,6 @@ function filteredAuthors(quotes) {
     }
     
 } 
+
+
 
