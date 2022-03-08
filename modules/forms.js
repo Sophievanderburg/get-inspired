@@ -1,4 +1,7 @@
 import { authorForm, tagsForm } from './sectionInteraction.js';
+import { cleanElement } from './utility.js'
+import {displatyFilteredQuotes} from './showFiltered.js'
+import { renderData } from './getAndRender.js'
 
 
 export const urlAPI = 'https://quote.api.fdnd.nl/v1/quote'
@@ -25,48 +28,58 @@ export function getTags(quotes){
     })
 }
 
-export function getAuthors(quotes){
-    sectionAuthorForm.innerHTML=""
+export function authorsForm(quotes){
     console.log("GET AUTHORS");
+
+    authorForm.addEventListener('change', event => {
+        filteredAuthors(quotes, event)
+    })
+
+    let authors = []
+    sectionAuthorForm.innerHTML=""
     // Bron: https://stackoverflow.com/questions/37856130/javascript-get-values-from-array-but-ignore-duplicates
-    let array = quotes.data;
-    let authors = [];
-    for(var i = 0, len = array.length; i < len; i++) {
-        if(authors.indexOf(array[i].name) > -1) {
-           // a double type is added to the array
-        }
-        else {
-            // a new type is added to the array
-            authors.push(array[i].name);
+     for(var i = 0, len = quotes.data.length; i < len; i++) {
+        if(authors.indexOf(quotes.data[i].name) == -1) {
+           // If the author is not in the array, push it in it
+           authors.push(quotes.data[i].name);
         }
     } 
+   
     authors.forEach(data => {
         sectionAuthorForm.insertAdjacentHTML('afterbegin', 
         `<div>
             <input type="checkbox" id="${data}">
             <label for="${data}"> ${data}</label>
         </div>`)
-    })
+    })     
+}
 
-    authorForm.addEventListener('change', event => {
+export let gefilterdeData; 
 
-        let checkedInputs = [...authorForm.querySelectorAll('input:checked')].map(el => el.id);
-        
-        // Filter de oorspronkelijke dataset op de entries die in de checkbox aangevinkt zijn
-        let newData = quotes.data.filter(element => {
-          // Als een van de checkbox entries matcht met 1 van de dataset entries
-          if(checkedInputs.includes(element.name)) {
+function filteredAuthors(quotes) {
+    let checkedInputs = [...authorForm.querySelectorAll('input:checked')].map(el => el.id);
+    
+    // Filter de oorspronkelijke dataset op de entries die in de checkbox aangevinkt zijn
+    let newData = quotes.data.filter(element => {
+      // Als een van de checkbox entries matcht met 1 van de dataset entries
+        if(checkedInputs.includes(element.name)) {
             // Voeg 'm toe aan de nieuwe array
             return true;
-          } else {
+        } else {
             // Filter 'm uit de nieuwe array
             return false;
-          }
-        })
-           
-        // Nieuwe array
-        console.log('Gefilterde array')
-        console.log(newData);
-      })  
-}
+        }
+    })
+       
+    // gefilterde array
+    console.log(newData);
+    cleanElement();
+
+    if (newData.length > 0){
+        displatyFilteredQuotes(newData);
+    } else{
+        renderData(quotes);
+    }
+    
+} 
 

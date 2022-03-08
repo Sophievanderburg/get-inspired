@@ -98,7 +98,7 @@ main > p{
     margin-bottom: 3em;
 }
 
-main > a{
+main > button{
     display: block;
     position: absolute;
     right: 1.5em;
@@ -112,7 +112,7 @@ main > a{
     border-radius: 20px;
 }
 
-main > a:active{
+main > button:active{
     background-color: #2b4175;
 }
 
@@ -247,7 +247,17 @@ main > section > form.show{
     display: block;
 }
 
-main > section > form section input[type="submit"]{
+main > section > form section div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main > section > form section div input[type="checkbox"]{
+    margin-right: 0.5em;
+}
+
+main > section > form section div input[type="submit"]{
     padding: 0.5em 1em;
     border: none;
     background-color: #3D5CA6;
@@ -257,6 +267,6 @@ main > section > form section input[type="submit"]{
     margin-top: 1em;
 }
 
-main > section > form section input[type="submit"]:disabled{
+main > section > form section div nput[type="submit"]:disabled{
     background-color: lightgray;
 }

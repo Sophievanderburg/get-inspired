@@ -20,10 +20,3 @@ export function showErrorState(){
     Something went wrong... Please reload this page to try again.
     </p>`)
 }
-
-export function removeSearchState(){   
-    history.back()
-    showOrHideSection()
-}
-
-hideSectionButton.addEventListener('click', removeSearchState);

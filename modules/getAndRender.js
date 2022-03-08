@@ -5,9 +5,10 @@ export const quoteList = document.querySelector('ul:first-of-type')
 export const paragraph = document.querySelector('main > p')
 
 
-import { getTags, getAuthors} from '/modules/forms.js'
+import { authorsForm, getTags} from '/modules/forms.js'
 import { hideLoadingState, showErrorState } from '/modules/states.js'
 
+import { gefilterdeData } from '/modules/forms.js'
 
 
 
@@ -23,7 +24,7 @@ export function getAndRenderData(){
         quotes.data = quotes.data.slice(0,-5)
         renderData(quotes)
         getTags(quotes)
-        getAuthors(quotes)
+        authorsForm(quotes)
       })
       .catch((error) => {
         console.log("Er gaat iets fout...")
