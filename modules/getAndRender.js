@@ -8,9 +8,6 @@ export const paragraph = document.querySelector('main > p')
 import { authorsForm, getTags} from '/modules/forms.js'
 import { hideLoadingState, showErrorState } from '/modules/states.js'
 
-import { gefilterdeData } from '/modules/forms.js'
-
-
 
 //Get data form API
 export function getAndRenderData(){

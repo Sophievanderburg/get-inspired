@@ -8,6 +8,13 @@ export const authorButton = document.querySelector('main section div button:nth-
 export const authorForm = document.querySelector('main section form:nth-of-type(2)');
 
 
+export const showTagsQuotesButton = document.querySelector('main section form:first-of-type button');
+export const showAuthorsQuotesButton = document.querySelector('main section form:nth-of-type(2) button');
+
+
+
+
+
 export function showOrHideSection(){
     section.classList.toggle("active");
 }
@@ -33,3 +40,13 @@ authorButton.addEventListener('click', showAuthorForm);
 
 showSectionButton.addEventListener('click', showOrHideSection);
 hideSectionButton.addEventListener('click', showOrHideSection);
+
+showTagsQuotesButton.addEventListener('click', showOrHideSection);
+showTagsQuotesButton.addEventListener('click', function(event){
+    event.preventDefault()
+  });
+
+showAuthorsQuotesButton.addEventListener('click', showOrHideSection);
+showAuthorsQuotesButton.addEventListener('click', function(event){
+    event.preventDefault()
+  });

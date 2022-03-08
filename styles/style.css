@@ -112,8 +112,16 @@ main > button{
     border-radius: 20px;
 }
 
-main > button:active{
+main > button:hover{
     background-color: #2b4175;
+}
+
+main > button:active{
+    background-color: #23355e;
+}
+
+main > button:focus{
+    border: 2px solid #1c9a8d;
 }
 
 /* ------------------------- quotes list -------------------------*/
@@ -245,6 +253,29 @@ main > section > form{
 
 main > section > form.show{
     display: block;
+}
+
+main > section > form > button{
+    text-decoration: none;
+
+    padding: 0.5em 1em;
+    border: none;
+    color: white;
+    background-color: #3D5CA6;
+    border-radius: 20px;
+    margin-top: 1em;
+}
+
+main > section > form > button:hover{
+    background-color: #2b4175;
+}
+
+main > section > form > button:active{
+    background-color: #23355e;
+}
+
+main > section > form > button:focus{
+    border: 2px solid #1c9a8d;
 }
 
 main > section > form section div{

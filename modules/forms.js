@@ -22,11 +22,15 @@ export function getTags(quotes){
     quotes.data.forEach(data => {
         sectionTagsForm.insertAdjacentHTML('afterbegin', 
         `<div>
-            <input type="checkbox" name="${data.tags}">
+            <input type="checkbox" id="${data.tags}">
         <label for="${data.tags}"> ${data.tags}</label>
         </div>`)
     })
 }
+
+
+
+
 
 export function authorsForm(quotes){
     console.log("GET AUTHORS");
@@ -54,7 +58,6 @@ export function authorsForm(quotes){
     })     
 }
 
-export let gefilterdeData; 
 
 function filteredAuthors(quotes) {
     let checkedInputs = [...authorForm.querySelectorAll('input:checked')].map(el => el.id);
