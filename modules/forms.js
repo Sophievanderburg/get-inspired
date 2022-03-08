@@ -8,6 +8,7 @@ export const checkboxAuthor = document.querySelectorAll("main section form:nth-o
 
 
 export function getTags(quotes){
+    titleFromTagsForm.innerHTML=" "
     console.log("GET TAGS")
     // Hier komt de filter voor de dubbele
     quotes.data.forEach(data => {

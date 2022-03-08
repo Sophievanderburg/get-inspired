@@ -1,5 +1,5 @@
 export const section = document.querySelector('main > section')
-export const showSectionButton = document.querySelector('main > button');
+export const showSectionLink= document.querySelector('main > a');
 export const hideSectionButton = document.querySelector('main section > button:first-of-type');
 
 export const tagsButton = document.querySelector('main section div button:first-of-type');
@@ -29,8 +29,8 @@ export function showTagsForm(){
 }
 
 
-showSectionButton.addEventListener('click',showOrHideSection);
-hideSectionButton.addEventListener('click',showOrHideSection);
+showSectionLink.addEventListener('click',showOrHideSection);
+// hideSectionButton.addEventListener('click',showOrHideSection);
 
 tagsButton.addEventListener('click', showTagsForm);
 authorButton.addEventListener('click', showAuthorForm);

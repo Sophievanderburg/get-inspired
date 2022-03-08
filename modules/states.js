@@ -1,4 +1,5 @@
 import {quoteList} from '/modules/getAndRender.js'
+import {hideSectionButton, showOrHideSection} from '/modules/sectionInteraction.js'
 
 export function showLoadingState(){
     quoteList.insertAdjacentHTML('afterbegin', 
@@ -18,3 +19,12 @@ export function showErrorState(){
         Something went wrong... Please reload this page to try again.
         </p>`)
 }
+
+export function removeSearchState(){   
+    history.back()
+    showOrHideSection()
+
+    console.log(window.location.href)
+}
+
+hideSectionButton.addEventListener('click', removeSearchState);
