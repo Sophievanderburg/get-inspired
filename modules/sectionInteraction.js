@@ -7,11 +7,8 @@ export const tagForm = document.querySelector('main section form:first-of-type')
 export const authorButton = document.querySelector('main section div button:nth-of-type(2)');
 export const authorForm = document.querySelector('main section form:nth-of-type(2)');
 
-
 export const showTagsQuotesButton = document.querySelector('main section form:first-of-type button');
 export const showAuthorsQuotesButton = document.querySelector('main section form:nth-of-type(2) button');
-
-
 
 
 
@@ -20,7 +17,7 @@ export function showOrHideSection(){
 }
 
 export function showAuthorForm(){
-    tagsForm.classList.remove("show")
+    tagForm.classList.remove("show")
     tagsButton.classList.remove("selected")
 
     authorForm.classList.add("show");
@@ -31,7 +28,7 @@ export function showTagsForm(){
     authorForm.classList.remove("show")
     authorButton.classList.remove("selected")
 
-    tagsForm.classList.add("show");
+    tagForm.classList.add("show");
     tagsButton.classList.add("selected")
 }
 
