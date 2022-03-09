@@ -72,7 +72,7 @@ With routie you can run code when a certain url is at the top of your screen. I 
 Here is a link for more info: http://projects.jga.me/routie/
 
 ## What I would do if I had more time
-- I want the user to be able to combine the two forms while filtering: for example filter for the quotes that are from ... subject & from the author...
+- I want the user to be able to combine the two forms while filtering: for example filter for the quotes that are from  ...  subject & from the author ...
 - After each checkbox a number of how many qoutes will show up if you check that cetrain tag or auhtor.
 - At the top of the quoteslist a number of how many quotes there are
 
