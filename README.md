@@ -1,4 +1,21 @@
 #  Welcome to the Get Inspired repo! ✨
+
+## Table of content
+- About the SPA
+  * The used user story
+- Interaction
+  * 📚 Filter on subject 
+  * 👫 Filter on author
+  * ❗ Filter disclaimer
+- Practical information
+  * Avtivity Diagram
+  * How to install
+  * The API
+  * Routie
+- What I would do if I had more time
+
+
+
 Link to Github Pages: [sophievanderburg.github.io/get-inspired/](sophievanderburg.github.io/get-inspired/) <br>
 <img width="250" alt="Screenshot 2022-03-08 at 16 23 48" src="https://user-images.githubusercontent.com/70577898/157280932-53b589f3-99c8-4c2b-a493-cbbce4da3274.png">
 <img width="250" alt="Screenshot 2022-03-08 at 16 23 53" src="https://user-images.githubusercontent.com/70577898/157280951-3e1656e3-23c8-45e4-b540-359b84673550.png">
@@ -15,7 +32,7 @@ When you open the app, all the quotes are shown. There are quotes about all sort
 ### 👫 Filter on author
 Maybe you have a favourite designer and you only want to see the quotes they said/wrote. You can do that by selecting the designer in the filter form. This way you only need to see the quotes form your  favourite designer.
 
-### Disclaimer
+### ❗ Filter disclaimer
 The two forms can not be combined when you are filtering. So you can use the subjects-form or the auhtors-form.
 
 
@@ -53,6 +70,8 @@ Here is a link for more info: http://projects.jga.me/routie/
 
 ## What I would do if I had more time
 - I want the user to be able to combine the two forms while filtering: for example filter for the quotes that are from ... subject & from the author...
+- After each checkbox a number of how many qoutes will show up if you check that cetrain tag or auhtor.
+- At the top of the quoteslist a number of how many quotes there are
 
 ##  
 
