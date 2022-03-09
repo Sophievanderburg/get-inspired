@@ -1,12 +1,17 @@
 #  Welcome to the Get Inspired repo! ✨
 
+Link to Github Pages: [sophievanderburg.github.io/get-inspired/](sophievanderburg.github.io/get-inspired/) <br>
+<img width="250" alt="Screenshot 2022-03-08 at 16 23 48" src="https://user-images.githubusercontent.com/70577898/157280932-53b589f3-99c8-4c2b-a493-cbbce4da3274.png">
+<img width="250" alt="Screenshot 2022-03-08 at 16 23 53" src="https://user-images.githubusercontent.com/70577898/157280951-3e1656e3-23c8-45e4-b540-359b84673550.png">
+<img width="250" alt="Screenshot 2022-03-08 at 16 24 06" src="https://user-images.githubusercontent.com/70577898/157280976-c4f7b053-7577-4b9c-a782-a713b5725931.png">
+
 ## Table of content
 - About the SPA
-  * The used user story
+  * The assigment
 - Interaction
   * 📚 Filter on subject 
   * 👫 Filter on author
-  * ❗ Filter disclaimer
+  * ❗ Disclaimer of the filter
 - Practical information
   * Avtivity Diagram
   * How to install
@@ -14,16 +19,14 @@
   * Routie
 - What I would do if I had more time
 
-
-
-Link to Github Pages: [sophievanderburg.github.io/get-inspired/](sophievanderburg.github.io/get-inspired/) <br>
-<img width="250" alt="Screenshot 2022-03-08 at 16 23 48" src="https://user-images.githubusercontent.com/70577898/157280932-53b589f3-99c8-4c2b-a493-cbbce4da3274.png">
-<img width="250" alt="Screenshot 2022-03-08 at 16 23 53" src="https://user-images.githubusercontent.com/70577898/157280951-3e1656e3-23c8-45e4-b540-359b84673550.png">
-<img width="250" alt="Screenshot 2022-03-08 at 16 24 06" src="https://user-images.githubusercontent.com/70577898/157280976-c4f7b053-7577-4b9c-a782-a713b5725931.png">
+##
 
 ## About the SPA
-### 💬 The used user story 
-As a student Digital Design, I want to look at inspiring web design quotes, to get some fresh energy when I'm down while working on crazy deadlines.
+### The assignment
+For the course [web app from scratch](https://github.com/cmda-minor-web/web-app-from-scratch-2122) for the minor Web Design & Devlopement I had to design and build a single page web app based on a User Story. 
+
+>  💬 The used user story <br>
+> As a student Digital Design, I want to look at inspiring web design quotes, to get some fresh energy when I'm down while working on crazy deadlines.
 
 ## Interaction 
 ### 📚 Filter on subject 
@@ -32,7 +35,7 @@ When you open the app, all the quotes are shown. There are quotes about all sort
 ### 👫 Filter on author
 Maybe you have a favourite designer and you only want to see the quotes they said/wrote. You can do that by selecting the designer in the filter form. This way you only need to see the quotes form your  favourite designer.
 
-### ❗ Filter disclaimer
+### ❗ Disclaimer of the filter
 The two forms can not be combined when you are filtering. So you can use the subjects-form or the auhtors-form.
 
 
