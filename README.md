@@ -75,6 +75,9 @@ Here is a link for more info: http://projects.jga.me/routie/
 - I want the user to be able to combine the two forms while filtering: for example filter for the quotes that are from  ...  subject & from the author ...
 - After each checkbox a number of how many qoutes will show up if you check that cetrain tag or auhtor.
 - At the top of the quoteslist a number of how many quotes there are
+- More advanced UI stack. I have all the states, but I think they should be more aesthetically pleasing. Now it is just a short sentence of what is hanppening.
+
+
 
 ##  
 
